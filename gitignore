@@ -1,0 +1,28 @@
+# Python cache and system files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+*.bak
+*.tmp
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Project-specific data and logs
+logs/
+data/
+can_logs/
+dtc_snapshots/
+error_logs/
+config/user_profiles/
+config/custom_pid_mappings.json
+
+# Ignore system services and archives
+*.service
+*.zip
+*.tar.gz
+*.old

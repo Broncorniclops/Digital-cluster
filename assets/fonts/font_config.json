@@ -1,0 +1,12 @@
+{
+    "fonts": [
+        {
+            "name": "Default",
+            "file": "Roboto-Regular.ttf"
+        },
+        {
+            "name": "Digital",
+            "file": "DS-DIGI.TTF"
+        }
+    ]
+}

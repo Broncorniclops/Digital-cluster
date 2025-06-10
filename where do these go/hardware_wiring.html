@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Gauge Cluster - Hardware & Wiring</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; background: #f4f4f4; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 10px; }
+        h1 { color: #333366; }
+        h2 { color: #444; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        ul { margin-left: 20px; }
+        img { max-width: 100%; border: 1px solid #ccc; border-radius: 5px; margin: 10px 0; }
+        code { background: #eee; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hardware & Wiring</h1>
+
+        <p>This digital gauge cluster is designed for the 2006 GMC Sierra or full-size Ford Bronco platform using a Raspberry Pi 3B. Below is the recommended hardware configuration and wiring details.</p>
+
+        <h2>📦 Required Components</h2>
+        <ul>
+            <li>Raspberry Pi 3B</li>
+            <li>SanDisk 128GB Extreme microSDXC UHS-I</li>
+            <li>Waveshare 7-inch HDMI IPS Capacitive Touchscreen (1024x600)</li>
+            <li>Waveshare High-Precision ADC HAT (ADS1263 or ADS1115)</li>
+            <li>Waveshare 2-Channel Isolated CAN Bus Expansion HAT (MCP2515 + SN65HVD230)</li>
+            <li>Waveshare UPS HAT + 2x Samsung 30Q 18650 Batteries</li>
+            <li>2x Noctua NF-A4x10 5V PWM Fans</li>
+            <li>Optional: Laser-cut bezel or cluster overlay</li>
+        </ul>
+
+        <h2>🔌 Wiring Diagram Overview</h2>
+        <img src="images/wiring_diagram.png" alt="Wiring Diagram Overview">
+
+        <h2>🧠 Wiring Details</h2>
+        <ul>
+            <li><strong>Touchscreen</strong> – Connect via HDMI + USB for power & touch input</li>
+            <li><strong>ADC HAT</strong> – Sits on GPIO header; configure SPI in <code>raspi-config</code></li>
+            <li><strong>CAN Bus HAT</strong> – Stack with ADC HAT; configure MCP2515 via SPI</li>
+            <li><strong>PWM Fans</strong> – Connect to 5V, GND, and GPIO18 for PWM signal</li>
+            <li><strong>Fuel Sender</strong> – Connect between ADC input and GND with 100Ω pull-up to 3.3V</li>
+        </ul>
+
+        <h2>⚠️ Power & Cooling Tips</h2>
+        <ul>
+            <li>Ensure reliable 5V 2.5A+ source for Pi and display</li>
+            <li>Use Noctua fans with Python-controlled PWM for thermal safety</li>
+            <li>Monitor UPS battery voltage and temperature via ADC if needed</li>
+        </ul>
+
+        <p>Next: <a href="software_setup.html">Software Setup →</a></p>
+    </div>
+</body>
+</html>

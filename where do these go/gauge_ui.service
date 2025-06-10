@@ -1,0 +1,18 @@
+[Unit]
+Description=Digital Gauge Cluster UI (Kivy)
+After=graphical.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/digital_gauge_cluster/main.py
+Restart=on-failure
+StandardOutput=append:/var/log/gauge_ui.log
+StandardError=append:/var/log/gauge_ui.log
+SyslogIdentifier=gauge_ui
+User=pi
+Group=pi
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+
+[Install]
+WantedBy=graphical.target

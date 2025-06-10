@@ -1,0 +1,51 @@
+{
+    "speed": {
+        "pid": "0D",
+        "mode": "01",
+        "formula": "A * 0.621371",
+        "unit": "MPH",
+        "type": "digital"
+    },
+    "rpm": {
+        "pid": "0C",
+        "mode": "01",
+        "formula": "((A * 256) + B) / 4",
+        "unit": "RPM",
+        "type": "analog"
+    },
+    "coolant_temp": {
+        "pid": "05",
+        "mode": "01",
+        "formula": "A - 40",
+        "unit": "\u00b0F",
+        "type": "bar"
+    },
+    "trans_temp": {
+        "pid": "AA",
+        "mode": "01",
+        "formula": "A - 40",
+        "unit": "\u00b0F",
+        "type": "bar"
+    },
+    "afr": {
+        "pid": "44",
+        "mode": "01",
+        "formula": "((A * 256) + B) / 32768 * 14.7",
+        "unit": "AFR",
+        "type": "digital"
+    },
+    "voltage": {
+        "pid": "42",
+        "mode": "01",
+        "formula": "((A * 256) + B) / 1000",
+        "unit": "V",
+        "type": "digital"
+    },
+    "oil_pressure": {
+        "pid": "66",
+        "mode": "01",
+        "formula": "A * 0.290",
+        "unit": "PSI",
+        "type": "bar"
+    }
+}

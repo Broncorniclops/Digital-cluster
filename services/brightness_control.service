@@ -1,0 +1,12 @@
+[Unit]
+Description=Ambient Light Based Brightness Control
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/cluster/brightness_control.py
+Restart=on-failure
+User=pi
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
