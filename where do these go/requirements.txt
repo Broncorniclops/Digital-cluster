@@ -1,0 +1,7 @@
+kivy
+python-can
+adafruit-circuitpython-tsl2591
+adafruit-circuitpython-dht
+adafruit-blinka
+smbus2
+RPi.GPIO
